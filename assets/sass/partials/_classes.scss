@@ -1,0 +1,421 @@
+@import "./variables";
+
+/*--- 4. All Extend in here ---*/
+
+.section-spacing {
+    padding: 6rem 0;
+}
+
+.section-top-space {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+}
+
+%widget-area-last-cild {
+    margin-bottom: 5rem;
+}
+
+%menu-style {
+    display: block;
+    color: $tertiary-color;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: $primary-font;
+    transition: all 0.3s ease-in-out;
+    padding: 2.8rem 0;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+%sub-menu-style {
+    display: block;
+    color: $primary-color;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: $primary-font;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 0;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+%top-btn {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    background: $primary-color;
+    border-radius: 5rem;
+    color: $tertiary-color;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    min-width: 100%;
+    // line-height: 2.8rem;
+    letter-spacing: 0.75px;
+}
+
+%social-icon {
+    font-size: 1.4rem;
+    color: $primary-color;
+    background: $tertiary-color;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background-color: $primary-color;
+        color: $primary-color;
+    }
+}
+
+.primary-btn-style {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    background: $secondary-color;
+    border-radius: 5rem;
+    color: #454545;
+    transition: $transition_3s;
+    line-height: 1.9rem;
+    padding: 1.5rem 2.5rem;
+    font-family: $primary-font;
+    font-style: normal;
+    &:hover {
+        background: $primary-color;
+        color: $tertiary-color;
+    }
+}
+
+%btn-style-tw {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: $primary-color;
+    border-radius: 5rem;
+    color: $primary-color;
+    border: 0.1rem solid $primary-color;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    min-width: 100%;
+    line-height: 2.8rem;
+    letter-spacing: 0.75px;
+    padding: 0.5rem 2.5rem;
+}
+
+%main-heading {
+    font-family: $primary-font;
+    font-size: 5.6rem;
+    line-height: 7rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $primary-color;
+    margin-bottom: 2.5rem;
+    span {
+        color: $secondary-color;
+    }
+}
+
+%slider-desc {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+    text-align: left;
+    color: #000000;
+}
+
+%section-top-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    letter-spacing: 0.15rem;
+    text-transform: capitalize;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    font-family: $primary-font;
+}
+
+%section-top-desc {
+    max-width: 758px;
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: #999999;
+}
+
+%inner-title-style {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: $primary-color;
+    text-transform: capitalize;
+}
+
+%inner-desc {
+    // font-family: $secondary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $desc-color;
+    margin: 0;
+}
+
+%footer-desc {
+    // font-family: $secondary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $tertiary-color;
+    margin: 2.5rem 0;
+    padding-right: 2rem;
+}
+
+%pr-icon-style {
+    font-size: 6rem;
+    background: $primary-color;
+    color: $tertiary-color;
+    padding: 2.5rem 3rem;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+%ct-icon-style {
+    font-size: 3.5rem;
+    background: $tertiary-color;
+    color: $primary-color;
+    padding: 3rem 2rem;
+    vertical-align: middle;
+    display: flex;
+    z-index: 999;
+    align-items: center;
+}
+
+%footer-social-icon {
+    font-size: 2rem;
+    color: $primary-color;
+    background: transparent;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+    vertical-align: middle;
+    border: 0.1rem solid $primary-color;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: $primary-color;
+        color: $tertiary-color;
+    }
+}
+
+// reuseable componants 
+// Category Item 
+.product-item-style {
+    &:hover {
+        i::before {
+            background: $secondary-color;
+        }
+        .pr-text {
+            background: $primary-color;
+            h3 {
+                color: $secondary-color;
+            }
+        }
+    }
+    i::before {
+        @extend %pr-icon-style;
+        border-radius: 1rem 0 0 1rem;
+        transition: $transition_3s;
+    }
+    .pr-text {
+        border-radius: 0 5rem 5rem 0;
+        transition: $transition_3s;
+        background: $secondary-color;
+        padding: 2.5rem 0 2.5rem 1.5rem;
+        width: 100%;
+        h3 {
+            @extend %inner-title-style;
+        }
+        span {
+            font-family: $primary-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            color: $tertiary-color;
+            text-transform: capitalize;
+        }
+    }
+}
+
+// Product Item style 
+.fp-item-style {
+    border-radius: 1rem;
+    background: $tertiary-color;
+    margin-bottom: 1.5rem;
+    &:hover {
+        .img-box {
+            img {
+                transform: scale(1.05);
+                width: 100%;
+            }
+        }
+    }
+    .img-box {
+        overflow: hidden;
+        border-radius: 1rem 1rem 0 0;
+        img {
+            transition: $transition_3s;
+            width: 100%;
+        }
+    }
+    .product-content {
+        padding: 2rem 3rem;
+        .product-details {
+            a {
+                font-family: $primary-font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                text-align: right;
+                color: $bText-color;
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+        .r-pricing {
+            padding: 2.5rem 0;
+            .star {
+                i:before {
+                    color: $secondary-color;
+                    font-size: 1.5rem;
+                    padding-right: 0.5rem;
+                }
+                span {
+                    font-style: normal;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: $text-color;
+                }
+            }
+            .price span {
+                font-family: $primary-font;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+                color: $primary-color;
+            }
+        }
+        a {
+            h5 {
+                font-family: $primary-font;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.9rem;
+                line-height: 2.7rem;
+                color: $bText-color;
+                margin-top: 0.5rem;
+            }
+        }
+        .btn__group {
+            .pr-btn {
+                @extend .primary-btn-style;
+                padding: 0.8rem 2rem;
+            }
+            .btn2 {
+                background: $primary-color;
+                color: $tertiary-color;
+                &:hover {
+                    background: $secondary-color;
+                    color: $bText-color;
+                }
+            }
+        }
+    }
+}
+
+.category-item-style {
+    transition: $transition_3s;
+    padding: 1.5rem;
+    background: $tertiary-color;
+    position: relative;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    &:hover {
+        .ct-text {
+            h3 {
+                color: $secondary-color;
+            }
+        }
+    }
+    i::before {
+        @extend %ct-icon-style;
+        transition: $transition_3s;
+    }
+    .ct-text {
+        transition: $transition_3s;
+        padding-left: 2rem;
+        width: 100%;
+        h3 {
+            @extend %inner-title-style;
+            transition: $transition_3s;
+            font-size: 2rem;
+        }
+        span {
+            font-family: $primary-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            color: $tertiary-color;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.tab-menu-style {
+    width: 10rem;
+    height: 10rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: $primary-font;
+    color: $tertiary-color;
+    background: $primary-color;
+    padding: 2rem;
+    border-radius: 50rem;
+    transition: $transition_3s;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background: $secondary-color;
+        color: $primary-color;
+    }
+}

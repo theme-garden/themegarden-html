@@ -1,0 +1,46 @@
+/*--- Top Header area ---*/
+
+.header-top {
+    background: $primary-color;
+    .topbar-support {
+        display: flex;
+        justify-content: space-between;
+        p a {
+            display: flex;
+            color: $primary-color;
+            i:before {
+                background: transparent;
+                color: $primary-color;
+                padding: 0;
+                vertical-align: middle;
+            }
+            span {
+                padding: 0.4rem 0;
+            }
+        }
+    }
+    ul {
+        padding: 0.5rem 0;
+        p {
+            margin: 0;
+            padding: 0.5rem;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 0.8rem;
+            color: $primary-color;
+            i::before {
+                vertical-align: middle;
+                align-items: center;
+                margin-right: 1rem;
+                font-size: 1.6rem;
+            }
+        }
+        li {
+            a i::before {
+                @extend %social-icon;
+            }
+        }
+    }
+}

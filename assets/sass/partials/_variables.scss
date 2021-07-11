@@ -1,0 +1,42 @@
+/*--- 2. Font Family ---*/
+
+$primary-font: "Rubik",
+sans-serif;
+$secondary-font: 'Work Sans',
+sans-serif;
+// Theme 
+$current-theme: #FFFFFF;
+// Transitions 
+$transition_3s: all 0.3s ease-in-out;
+$transition_5s: all 0.5s ease-in-out;
+$transition_7s: all 0.7s ease-in-out;
+
+/*--- Colors variable ---*/
+
+$primary-color: #313131;
+$secondary-color: #82B440;
+$tertiary-color: #FFFFFF;
+$text-color: #999999;
+$desc-color: #7a7a7a;
+$bText-color: #454545;
+$bs-blue: #0d6efd;
+$bs-indigo: #6610f2;
+$bs-purple: #6f42c1;
+$bs-pink: #d63384;
+$bs-red: #dc3545;
+$bs-orange: #fd7e14;
+$bs-yellow: #ffc107;
+$bs-green: #198754;
+$bs-teal: #20c997;
+$bs-cyan: #0dcaf0;
+$bs-white: #fff;
+$bs-gray: #6c757d;
+$bs-gray-dark: #343a40;
+$bs-primary: #0d6efd;
+$bs-secondary: #6c757d;
+$bs-success: #198754;
+$bs-info: #0dcaf0;
+$bs-warning: #ffc107;
+$bs-danger: #dc3545;
+$bs-light: #f8f9fa;
+$bs-dark: #212529;

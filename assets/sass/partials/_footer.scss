@@ -1,0 +1,118 @@
+@import "./classes";
+
+/*======== FOOTER AREA =======*/
+
+.footer-area {
+    position: relative;
+    background: $primary-color;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+    .footer-wrapper {
+        padding-bottom: 4.5rem;
+        .widget-area {
+            p {
+                @extend %footer-desc;
+            }
+            ul {
+                li {
+                    a i::before {
+                        @extend %footer-social-icon;
+                    }
+                }
+            }
+        }
+        .widget-area {
+            position: relative;
+            margin-top: 0.5rem;
+            h3 {
+                color: $tertiary-color;
+                font-weight: 700;
+                font-size: 2.2rem;
+                text-transform: capitalize;
+                position: relative;
+                margin-bottom: 2rem;
+            }
+            ul {
+                padding: 0;
+                li {
+                    list-style: none;
+                    transition: all 0.3s ease-in-out;
+                    margin-bottom: 1.5rem;
+                    &:hover {
+                        transform: translateX(0.5rem);
+                        a {
+                            color: $secondary-color;
+                        }
+                    }
+                    a {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 1.4rem;
+                        line-height: 2.1rem;
+                        align-items: center;
+                        transition: all 0.3s ease-in-out;
+                        text-transform: capitalize;
+                        line-height: 2.1rem;
+                        color: $tertiary-color;
+                        font-family: $secondary-font;
+                    }
+                }
+            }
+            .single_info {
+                margin-top: 1rem;
+                color: $tertiary-color;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                span i {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    color: $secondary-color;
+                    margin-right: 1rem;
+                    &::before {
+                        vertical-align: middle;
+                    }
+                }
+                p,
+                a {
+                    font-weight: 500;
+                    line-height: 2.8rem;
+                    color: $tertiary-color;
+                    &:hover {
+                        color: $secondary-color;
+                        transition: $transition_3s;
+                    }
+                }
+            }
+            .subscribe_form {
+                width: 100%;
+                margin: 0 auto;
+                box-shadow: 0rem 0.2rem 0.5rem 0rem rgba(10, 6, 20, 0.24);
+                .input-group {
+                    padding-top: 2rem;
+                    padding-bottom: 4.5rem;
+                }
+                input {
+                    height: 4.4rem;
+                    font-size: 1.6rem;
+                    padding: 0 1rem;
+                }
+                button {
+                    border-radius: 0 0.25rem 0.25rem 0;
+                    width: 10rem;
+                    padding: 1rem 0.5rem;
+                    text-transform: uppercase;
+                    transition: all ease 0.3s;
+                }
+                .input-group-btn:last-child>.btn,
+                .input-group-btn:last-child>.btn-group {
+                    z-index: 2;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    .other-page-footer {
+        padding-top: 0 !important;
+    }
+}

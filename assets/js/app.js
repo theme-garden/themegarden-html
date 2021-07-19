@@ -103,7 +103,7 @@
                 nav: false
             },
             576: {
-                items: 1,
+                items: 2,
                 dots: false,
                 nav: false
             },

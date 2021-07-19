@@ -1,291 +1,362 @@
-    @import "./variables";
-    @import "./classes";
-    @import "./searchbar";
-    .header-area {
-        .site-wrapper {
-            a.navbar-brand {
-                padding: 1.5rem 0;
-            }
+@import "./variables";
+@import "./classes";
+@import "./searchbar";
+.header-area {
+    .site-wrapper {
+        a.navbar-brand {
+            padding: 1.5rem 0;
         }
     }
-    
-    .main-navbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        // background-color: #444444;
-    }
-    
-    .main-navbar.sticky {
-        position: fixed;
-        z-index: 991;
-        top: 0;
-        left: 0;
-        background-color: #313131;
-        width: 100%;
-        // transition: transform 500ms ease, visibility 500ms ease;
-        box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 5%);
-        .site-wrapper {
-            a.navbar-brand {
-                padding: 0.5rem 0;
-            }
-        }
-        .main-nav ul li a {
-            padding: 1.8rem 0;
-        }
-        .main-nav ul li.has-child-menu:after {
-            top: 1.8rem;
-            font-weight: 400;
-            transition: $transition_3s;
+}
+
+.main-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    // background-color: #444444;
+}
+
+.main-navbar.sticky {
+    position: fixed;
+    z-index: 991;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    width: 100%;
+    // transition: transform 500ms ease, visibility 500ms ease;
+    box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 5%);
+    .site-wrapper {
+        a.navbar-brand {
+            padding: 0.5rem 0;
         }
     }
-    /*======= 3. header-area ========= */
-    
-    .header-area ul.menus {
-        position: relative;
+    .main-nav ul li a {
+        padding: 1.8rem 0;
     }
-    
-    .header-area .main-navbar .main-nav {
-        float: right;
-        .cart-menu {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            li {
-                padding: 0 0.75rem;
-            }
-        }
-        .cart-menu li:last-child {
-            margin: 0;
-        }
-        .cart-btn {
-            background: transparent;
-            color: $primary-color;
-            font-size: 1.6rem;
-            border: none;
-            transition: $transition_3s;
-            position: relative;
-            &:focus {
-                box-shadow: none;
-            }
+    .main-nav ul li .search-icon {
+        a.search-btn {
             &:hover {
-                color: $secondary-color;
-            }
-            span.count {
-                width: 1.5rem;
-                height: 1.5rem;
-                font-size: 0.9rem;
-                display: flex;
-                align-items: center;
-                font-weight: 700;
-                color: $primary-color;
-                padding: 0.5rem;
-                background: $secondary-color;
-                border-radius: 5rem;
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-        }
-    }
-    
-    .header-area .main-navbar .main-nav ul {
-        margin: 0;
-        list-style: none;
-    }
-    
-    .header-area .main-nav ul li {
-        display: inline-block;
-        position: relative;
-        padding: 0 1.8rem;
-    }
-    
-    .header-area .main-nav ul li:last-child {
-        margin-right: 3rem;
-    }
-    
-    .header-area .main-nav ul li a {
-        @extend %menu-style;
-    }
-    
-    .header-area .main-nav ul li ul.sub-menu>li {
-        padding: 0;
-        a {
-            padding: 0.75rem 0;
-        }
-    }
-    
-    .header-area .main-navbar .main-nav ul li ul.sub-menu>li>a {
-        @extend %sub-menu-style;
-        margin-left: 1.5rem;
-    }
-    
-    .header-area .main-nav ul li a,
-    .header-area .main-navbar .main-nav ul li ul.sub-menu>li>a {
-        padding: 0.75rem 0;
-        position: relative;
-        &::after {
-            content: '';
-            width: 0;
-            height: 0.3rem;
-            background-color: $tertiary-color;
-            position: absolute;
-            left: 0;
-            bottom: 2rem;
-            transition: $transition_7s;
-        }
-    }
-    
-    .header-area .main-nav ul li ul.sub-menu>li a.active {
-        color: $secondary-color;
-    }
-    
-    .header-area .main-nav ul li ul.sub-menu>li a:hover {
-        background: transparent;
-        color: $secondary-color;
-        transform: translateX(10px);
-    }
-    
-    .header-area .main-nav ul li.has-child-menu:after {
-        position: absolute;
-        right: 0;
-        color: $tertiary-color;
-        top: 2.8rem;
-        font-family: "boxicons";
-        content: "";
-        font-size: 1.6rem;
-        font-weight: 600;
-        transition: $transition_3s;
-    }
-    
-    .header-area .main-nav ul li:hover.has-child-menu:after {
-        transform: rotate(-180deg);
-        color: $secondary-color;
-    }
-    
-    .header-area .nav-right {
-        ul {
-            li {
-                padding: 1.5rem 0;
-                .top-btn {
-                    border: 0.8rem solid rgba(255, 193, 32, 0.3);
-                    border-radius: 5rem;
-                    transition: $transition_3s;
-                    &:hover {
-                        border: 0.8rem solid rgba(38, 35, 57, 0.3);
-                        .quote_btn {
-                            background: $primary-color;
-                        }
-                    }
-                    a.quote_btn {
-                        @extend %top-btn;
-                    }
+                i:before {
+                    color: $secondary-color;
                 }
             }
         }
     }
-    
-    .header-area .main-nav>ul>li>a.active {
+    .main-nav ul li.has-child-menu:after {
+        top: 1.8rem;
+        font-weight: 400;
+        transition: $transition_3s;
+    }
+    .main-nav>ul>li>a {
+        &::after {
+            content: '';
+            width: 0;
+            height: 0.2rem;
+            background-color: $secondary-color;
+            position: absolute;
+            left: 0;
+            bottom: 1.5rem;
+        }
+    }
+    .main-nav>ul>li>a:hover {
         color: $secondary-color;
         &::after {
             content: '';
             width: 100%;
-            height: 0.3rem;
+            height: 0.2rem;
             background-color: $secondary-color;
             position: absolute;
             left: 0;
-            bottom: 2rem;
+            bottom: 1.5rem;
         }
     }
-    /*===== Main Menu CSS =====*/
-    
-    .main-nav ul li .sub-menu {
-        position: absolute;
-        left: 0;
-        top: auto;
-        right: 0;
-        min-width: 200px;
-        list-style: none;
+    .main-nav>ul>li>a.active {
+        color: $secondary-color;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 0.2rem;
+            background-color: $secondary-color;
+            position: absolute;
+            left: 0;
+            bottom: 1.5rem;
+        }
+    }
+}
+
+
+/*======= 3. header-area ========= */
+
+.header-area ul.menus {
+    position: relative;
+}
+
+.header-area .main-navbar .main-nav {
+    float: right;
+    .cart-menu {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        li {
+            padding: 0 0.75rem;
+        }
+    }
+    .cart-menu li:last-child {
         margin: 0;
-        padding: 0;
-        background: #f3f2f7;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-        transform: translateY(20px);
-        transition: $transition_3s;
-        border-top: 3px solid $secondary-color;
     }
-    
-    .main-nav ul li .sub-menu li .sub-menu {
-        right: -200px;
-        left: inherit;
-        top: 0;
-    }
-    
-    .main-nav ul li .sub-menu>li {
-        display: block;
-        margin: 0;
-        position: relative;
-    }
-    
-    .main-nav ul>li a:hover {
+    .cart-btn {
         background: transparent;
         color: $primary-color;
-        &::after {
-            width: 100%;
+        font-size: 1.6rem;
+        border: none;
+        transition: $transition_3s;
+        position: relative;
+        &:focus {
+            box-shadow: none;
+        }
+        &:hover {
+            color: $secondary-color;
+        }
+        span.count {
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: $primary-color;
+            padding: 0.5rem;
+            background: $secondary-color;
+            border-radius: 5rem;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
-    
-    .main-nav .fl {
-        width: 30px;
-        font-size: 20px;
-        line-height: 35px;
-        text-align: center;
-        color: #fff;
-        font-style: normal;
+}
+
+.header-area .main-navbar .main-nav ul {
+    margin: 0;
+    list-style: none;
+}
+
+.header-area .main-nav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 0 1.8rem;
+}
+
+.header-area .main-nav ul li .search-icon {
+    a.search-btn {
+        &:hover {
+            i:before {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.header-area .main-nav ul li:last-child {
+    margin-right: 3rem;
+}
+
+.header-area .main-nav>ul>li>a {
+    @extend %menu-style;
+    position: relative;
+    &::after {
+        content: '';
+        width: 0;
+        height: 0.2rem;
+        background-color: $primary-color;
         position: absolute;
-        right: -5px;
-        top: 0;
-        z-index: 999;
+        left: 0;
+        bottom: 2.5rem;
+        transition: $transition_5s;
+    }
+}
+
+.header-area .main-nav ul li ul.sub-menu>li {
+    padding: 0;
+    a {
+        padding: 0.75rem 0;
+    }
+}
+
+.header-area .main-navbar .main-nav ul li ul.sub-menu>li>a {
+    @extend %sub-menu-style;
+    margin-left: 1.5rem;
+    &::after {
         display: none;
-        cursor: pointer;
     }
-    
-    .main-nav .fl:before {
-        font-size: 14px;
-        text-align: center;
-        line-height: 35px;
+}
+
+.header-area .main-nav ul li a,
+.header-area .main-navbar .main-nav ul li ul.sub-menu>li>a {
+    padding: 0.75rem 0;
+}
+
+.header-area .main-nav ul li ul.sub-menu>li a.active {
+    color: $secondary-color;
+}
+
+.header-area .main-nav ul li ul.sub-menu>li a:hover {
+    background: transparent;
+    color: $secondary-color;
+    transform: translateX(10px);
+}
+
+.header-area .main-nav ul li.has-child-menu:after {
+    position: absolute;
+    right: 0;
+    color: $tertiary-color;
+    top: 2.8rem;
+    font-family: "boxicons";
+    content: "";
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: $transition_3s;
+}
+
+.header-area .main-nav ul li:hover.has-child-menu:after {
+    transform: rotate(-180deg);
+    color: $secondary-color;
+}
+
+.header-area .nav-right {
+    ul {
+        li {
+            padding: 1.5rem 0;
+            .top-btn {
+                border: 0.8rem solid rgba(255, 193, 32, 0.3);
+                border-radius: 5rem;
+                transition: $transition_3s;
+                &:hover {
+                    border: 0.8rem solid rgba(38, 35, 57, 0.3);
+                    .quote_btn {
+                        background: $primary-color;
+                    }
+                }
+                a.quote_btn {
+                    @extend %top-btn;
+                }
+            }
+        }
     }
-    
-    .main-nav>ul>li+li>.sub-menu {
-        left: 15px;
+}
+
+.header-area .main-nav>ul>li>a.active {
+    color: $primary-color;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 0.2rem;
+        background-color: $primary-color;
+        position: absolute;
+        left: 0;
+        bottom: 2.5rem;
     }
-    
-    .main-nav>ul>li:hover>.sub-menu,
-    .main-nav ul li .sub-menu li:hover>.sub-menu,
-    .main-nav ul li .sub-menu li .sub-menu li:hover>.sub-menu {
-        transform: translateY(0);
-        visibility: visible;
-        opacity: 1;
+}
+
+
+/*===== Main Menu CSS =====*/
+
+.main-nav ul li .sub-menu {
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: 0;
+    min-width: 25rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    background: #f3f2f7;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transform: translateY(20px);
+    transition: $transition_3s;
+    border-top: 3px solid $secondary-color;
+}
+
+.main-nav ul li .sub-menu li .sub-menu {
+    right: -200px;
+    left: inherit;
+    top: 0;
+}
+
+.main-nav ul li .sub-menu>li {
+    display: block;
+    margin: 0;
+    position: relative;
+}
+
+.main-nav ul>li a:hover {
+    background: transparent;
+    color: $primary-color;
+    &::after {
+        width: 100%;
     }
-    
-    .slideInUp {
-        visibility: hidden;
-        opacity: 0;
-        transform: translate3d(0, 30px, 0);
-        transition: all 1s ease-out;
+}
+
+.main-nav .fl {
+    width: 30px;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-style: normal;
+    position: absolute;
+    right: -5px;
+    top: 0;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+}
+
+.main-nav .fl:before {
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.main-nav>ul>li+li>.sub-menu {
+    left: 15px;
+}
+
+.main-nav>ul>li:hover>.sub-menu,
+.main-nav ul li .sub-menu li:hover>.sub-menu,
+.main-nav ul li .sub-menu li .sub-menu li:hover>.sub-menu {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.slideInUp {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: all 1s ease-out;
+}
+
+.is-active .slideInUp {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.slideInUp2 {
+    transition-delay: $transition_3s;
+}
+
+a.search-btn {
+    &:hover {
+        i:before {
+            color: $primary-color;
+        }
     }
-    
-    .is-active .slideInUp {
-        visibility: visible;
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-    
-    .slideInUp2 {
-        transition-delay: $transition_3s;
-    }
-    /*--- Navbar area end ---*/
+}
+
+
+/*--- Navbar area end ---*/

@@ -1,7 +1,6 @@
 @import "./variables";
 @import "./classes";
 a.search-btn {
-    // margin-right: 2rem;
     &::after {
         display: none;
     }
@@ -12,9 +11,10 @@ a.search-btn {
     }
     i:before {
         font-size: 1.8rem;
-        font-weight: 400;
+        font-weight: 500;
         color: $tertiary-color;
         vertical-align: middle;
+        transition: $transition_3s;
     }
 }
 
@@ -22,7 +22,7 @@ a.search-btn {
     width: 50rem;
     height: 5rem;
     position: absolute;
-    top: 100%;
+    top: 4.1rem;
     right: 0;
     opacity: 1;
     z-index: 9;

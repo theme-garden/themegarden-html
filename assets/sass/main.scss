@@ -35,6 +35,7 @@ body {
 
 .main-wrapper {
     background-color: #E5E5E5;
+    overflow-x: hidden;
 }
 
 .active {
@@ -70,11 +71,11 @@ a {
 }
 
 .btn,
+.btn:focus,
 input,
 input:focus,
 button,
-button:focus,
-:focus {
+button:focus {
     outline: none;
     border: none;
     box-shadow: none;
@@ -95,50 +96,38 @@ figure {
     .owl-dots {
         text-align: center;
         position: relative;
-        bottom: -12rem;
+        bottom: -3rem;
         width: 100%;
         backface-visibility: hidden;
         text-align: center;
-        margin-top: -7.5rem;
+        // margin-top: -7.5rem;
         justify-content: center;
         display: flex;
         margin-right: 1rem;
         .owl-dot {
-            margin: 0 1rem 11.2rem;
-            width: 1.7rem;
-            height: 1.3rem;
-            background: $secondary-color;
-            border-radius: 0.3rem;
+            margin: 0 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: $primary-color;
+            border-radius: 10rem;
             display: inline-block;
             vertical-align: middle;
         }
         .active {
-            background: $primary-color;
+            background: $secondary-color;
             position: relative;
-            // &::before {
-            //     content: "";
-            //     height: 2.1rem;
-            //     width: 2.1rem;
-            //     border: 1px solid $primary-color;
-            //     display: inline-block;
-            //     vertical-align: middle;
-            //     position: absolute;
-            //     border-radius: 100%;
-            //     top: -4px;
-            //     left: -4px;
-            // }
-            // &::after {
-            //     content: "";
-            //     height: 2.9rem;
-            //     width: 2.9rem;
-            //     border: 1px solid $primary-color;
-            //     display: inline-block;
-            //     vertical-align: middle;
-            //     position: absolute;
-            //     border-radius: 100%;
-            //     top: -8px;
-            //     left: -8px;
-            // }
+            &::before {
+                content: "";
+                height: 2.1rem;
+                width: 2.1rem;
+                border: 1px solid $secondary-color;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 10rem;
+                position: absolute;
+                top: -2.8px;
+                left: -2.8px;
+            }
         }
     }
 }
@@ -155,32 +144,7 @@ figure {
     background-position: top, bottom;
     background-size: cover;
     padding-top: 19.5rem;
-    // padding-bottom: 14.7rem;
     position: relative;
-    // &::before {
-    //     background-image: url(../images/banner-left-shape.svg);
-    //     content: "";
-    //     position: absolute;
-    //     left: 0.5rem;
-    //     z-index: 0;
-    //     // opacity: 0.5;
-    //     width: 18rem;
-    //     height: 44rem;
-    //     background-repeat: no-repeat;
-    // }
-    // &::after {
-    //     background-image: url(../images/banner-right-shape.svg);
-    //     content: "";
-    //     position: absolute;
-    //     right: 0;
-    //     bottom: 0;
-    //     z-index: 0;
-    //     // opacity: 0.5;
-    //     width: 26.2rem;
-    //     height: 72.7rem;
-    //     background-repeat: no-repeat;
-    //     box-shadow: 0px 0px 4px rgba(255, 194, 34, 0.2);
-    // }
     .slider-content {
         z-index: 9;
         h1 {
@@ -206,6 +170,9 @@ figure {
 .section-header {
     h2 {
         @extend %section-top-title;
+        span {
+            color: $secondary-color
+        }
     }
     p {
         @extend %section-top-desc;
@@ -215,6 +182,10 @@ figure {
 
 .section-inner-content {
     margin-top: 6rem;
+}
+
+.pr-feature-area {
+    padding-bottom: 9rem;
 }
 
 .pr-item {
@@ -227,29 +198,6 @@ figure {
 }
 
 .ct-item {
-    &::before {
-        background-image: url(../images/rating-shape.png);
-        content: "";
-        position: absolute;
-        left: 0.5rem;
-        // bottom: 50%;
-        z-index: 0;
-        width: 9rem;
-        height: 11rem;
-        background-repeat: no-repeat;
-    }
-    &::after {
-        background-image: url(../images/rating-shape2.png);
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 0;
-        width: 19rem;
-        height: 12.5rem;
-        background-repeat: no-repeat;
-    }
     @extend .category-item-style;
     margin-bottom: 4rem;
 }
@@ -259,29 +207,34 @@ figure {
 
 .nav__menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 7.5rem;
-    border-bottom: 0.2rem solid #EEEEEE;
-    min-height: 15rem;
+    border-bottom: 0.1rem solid #c4c4c4;
+    padding: 1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
     .menu__item {
-        // border-bottom: 0.2rem solid $primary-color;
-        margin-right: 4.5rem;
-        padding-bottom: 1rem;
+        // padding-bottom: 2rem;
         position: relative;
         .tab-menu {
             @extend .tab-menu-style;
+            padding: 1rem 0;
+            margin-right: 2rem;
+            i:before {
+                font-size: 6rem;
+                vertical-align: middle;
+            }
         }
         .active {
-            background: $secondary-color;
-            color: $primary-color;
+            color: $secondary-color;
             position: relative;
             &::after {
                 content: '';
-                width: 10rem;
-                height: 0.2rem;
+                width: 100%;
+                height: 0.5rem;
                 background: $secondary-color;
                 position: absolute;
-                bottom: -1.1rem;
+                bottom: -1rem;
                 left: 0;
             }
         }
@@ -348,7 +301,7 @@ figure {
 }
 
 .testimonial-area {
-    background: linear-gradient(rgba(31, 32, 68, 0.8), rgba(31, 32, 68, 0.8)), url(../images/testimonial-bg-img.png);
+    background: linear-gradient(rgba(130, 180, 64, 0.8), rgba(130, 180, 64, 0.8));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -371,6 +324,17 @@ figure {
 .testimonial-slider {
     .owl-dots {
         bottom: -8.5rem;
+    }
+}
+
+.team__card {
+    .team__card__footer {
+        .team__title {
+            h3 {
+                @extend %inner-title-style;
+                color: $secondary-color;
+            }
+        }
     }
 }
 

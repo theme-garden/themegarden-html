@@ -19,16 +19,16 @@
     display: block;
     color: $tertiary-color;
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: capitalize;
     text-decoration: none;
     font-family: $primary-font;
-    transition: all 0.3s ease-in-out;
+    transition: $transition_3s;
     padding: 2.8rem 0;
     position: relative;
     cursor: pointer;
     &:hover {
-        color: $secondary-color;
+        color: $primary-color;
     }
 }
 
@@ -41,7 +41,7 @@
     text-decoration: none;
     font-family: $primary-font;
     transition: all 0.3s ease-in-out;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     position: relative;
     cursor: pointer;
     &:hover {
@@ -141,7 +141,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 4.5rem;
-    line-height: 5rem;
+    line-height: 5.6rem;
     letter-spacing: 0.15rem;
     text-transform: capitalize;
     color: $primary-color;
@@ -191,23 +191,27 @@
 }
 
 %pr-icon-style {
-    font-size: 6rem;
-    background: $primary-color;
-    color: $tertiary-color;
-    padding: 2.5rem 3rem;
+    font-size: 4rem;
+    color: $secondary-color;
     vertical-align: middle;
     display: flex;
     align-items: center;
+    background: rgba(130, 180, 64, 0.3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
 }
 
 %ct-icon-style {
-    font-size: 3.5rem;
+    font-size: 4rem;
     background: $tertiary-color;
     color: $primary-color;
-    padding: 3rem 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: $secondary-color;
+    background: rgba(130, 180, 64, 0.3);
     vertical-align: middle;
     display: flex;
-    z-index: 999;
     align-items: center;
 }
 
@@ -232,39 +236,64 @@
 // reuseable componants 
 // Category Item 
 .product-item-style {
+    border: 1px solid $secondary-color;
+    display: flex;
+    // align-items: center;
+    border-radius: 0.5rem;
+    padding: 2rem 1.5rem;
+    transition: $transition_3s;
+    background: $tertiary-color;
     &:hover {
-        i::before {
-            background: $secondary-color;
-        }
-        .pr-text {
-            background: $primary-color;
-            h3 {
-                color: $secondary-color;
-            }
-        }
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     }
     i::before {
         @extend %pr-icon-style;
-        border-radius: 1rem 0 0 1rem;
-        transition: $transition_3s;
     }
-    .pr-text {
-        border-radius: 0 5rem 5rem 0;
+    .pr__item-content {
         transition: $transition_3s;
-        background: $secondary-color;
-        padding: 2.5rem 0 2.5rem 1.5rem;
         width: 100%;
-        h3 {
-            @extend %inner-title-style;
+        .item-title {
+            h3 {
+                @extend %inner-title-style;
+                font-size: 2.2rem;
+                line-height: 3rem;
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+            }
         }
-        span {
-            font-family: $primary-font;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1.8rem;
-            line-height: 3rem;
-            color: $tertiary-color;
-            text-transform: capitalize;
+        .item-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .item-count {
+                font-family: $primary-font;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.6rem;
+                color: $text-color;
+                text-transform: lowercase;
+            }
+            .item-month {
+                position: relative;
+                .item-month-count {
+                    position: absolute;
+                    right: 0;
+                    top: -2rem;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 2.4rem;
+                    letter-spacing: 0.2px;
+                    color: $secondary-color;
+                    text-align: right;
+                }
+                .item-month-text {
+                    text-align: right;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    line-height: 2.1rem;
+                    color: $text-color;
+                }
+            }
         }
     }
 }
@@ -291,7 +320,7 @@
         }
     }
     .product-content {
-        padding: 2rem 3rem;
+        padding: 2rem 1.5rem;
         .product-details {
             a {
                 font-family: $primary-font;
@@ -345,7 +374,8 @@
         .btn__group {
             .pr-btn {
                 @extend .primary-btn-style;
-                padding: 0.8rem 2rem;
+                padding: 1rem 2rem;
+                max-width: 48%;
             }
             .btn2 {
                 background: $primary-color;
@@ -361,18 +391,14 @@
 
 .category-item-style {
     transition: $transition_3s;
-    padding: 1.5rem;
+    padding: 2rem;
     background: $tertiary-color;
     position: relative;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     &:hover {
-        .ct-text {
-            h3 {
-                color: $secondary-color;
-            }
-        }
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     }
     i::before {
         @extend %ct-icon-style;
@@ -380,42 +406,28 @@
     }
     .ct-text {
         transition: $transition_3s;
-        padding-left: 2rem;
+        margin-left: 1rem;
         width: 100%;
         h3 {
             @extend %inner-title-style;
             transition: $transition_3s;
-            font-size: 2rem;
-        }
-        span {
-            font-family: $primary-font;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1.8rem;
-            line-height: 3rem;
-            color: $tertiary-color;
-            text-transform: capitalize;
+            font-size: 2.2rem;
+            font-weight: 400;
         }
     }
 }
 
 .tab-menu-style {
-    width: 10rem;
-    height: 10rem;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
+    text-transform: uppercase;
     font-family: $primary-font;
-    color: $tertiary-color;
-    background: $primary-color;
-    padding: 2rem;
-    border-radius: 50rem;
+    color: $primary-color;
+    background: transparent;
+    padding: 0;
     transition: $transition_3s;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     &:hover {
-        background: $secondary-color;
-        color: $primary-color;
+        color: $secondary-color;
     }
 }

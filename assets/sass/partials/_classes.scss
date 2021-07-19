@@ -431,3 +431,19 @@
         color: $secondary-color;
     }
 }
+
+.team__style {
+    figure.img__box {
+        border-radius: 1rem;
+        overflow: hidden;
+        img {}
+    }
+    .team__card__footer {
+        .team__title {
+            h3 {
+                @extend %inner-title-style;
+                color: $secondary-color;
+            }
+        }
+    }
+}

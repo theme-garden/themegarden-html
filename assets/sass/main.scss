@@ -328,14 +328,7 @@ figure {
 }
 
 .team__card {
-    .team__card__footer {
-        .team__title {
-            h3 {
-                @extend %inner-title-style;
-                color: $secondary-color;
-            }
-        }
-    }
+    @extend .team__style;
 }
 
 .tsm-item {
